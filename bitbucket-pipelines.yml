@@ -1,0 +1,12 @@
+image: php:8.3-cli
+
+pipelines:
+  default:
+    - step:
+        name: Static rental portal checks
+        script:
+          - php -l public/index.php
+          - php -l routes/web.php
+          - php -l app/Http/Controllers/Controller.php
+          - php -l app/Http/Controllers/RentalPortalController.php
+          - php -l database/migrations/2026_07_04_000000_create_rental_portal_schema.php
