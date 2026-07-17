@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+
+echo "Rental Portal scaffold. Install Laravel dependencies to enable artisan commands.\n";

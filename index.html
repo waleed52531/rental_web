@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rental Portal — Web Dashboard Wireframe</title>
+  <meta name="description" content="Web-only rental management portal wireframe for admins, renters, and applicants.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="portal-shell">
+    <aside class="sidebar" aria-label="Owner admin navigation">
+      <div class="sidebar-brand">Rental Portal</div>
+      <div class="sidebar-subtitle">Web-only wireframe</div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Owner / Admin</div>
+        <nav class="sidebar-nav">
+          <a class="active" href="#dashboard">Dashboard</a>
+          <a href="#properties">Properties</a>
+          <a href="#tenants">Tenants</a>
+          <a href="#approvals">Monthly Approvals</a>
+          <a href="#maintenance">Maintenance</a>
+          <a href="#applications">Applications</a>
+          <a href="#profiles">Profiles</a>
+          <a href="#reports">Reports</a>
+          <a href="#settings">Settings</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p>Overview of properties, tenants, approvals, and maintenance</p>
+        </div>
+        <div class="topbar-actions">
+          <label class="sr-only" for="globalSearch">Search property, tenant, area</label>
+          <input id="globalSearch" type="search" placeholder="Search property, tenant, area...">
+          <button type="button" class="button button-outline">Notifications</button>
+          <button type="button" class="button button-dark">Owner Profile</button>
+          <button type="button" class="button button-outline">Renter Profile</button>
+          <button type="button" class="button button-outline">Guest Profile</button>
+        </div>
+      </header>
+
+      <div class="content-stack">
+        <section class="stats-grid" id="dashboard" aria-label="Dashboard statistics">
+          <article class="stat-card">
+            <span>Total Properties</span>
+            <strong>24</strong>
+            <small>8 available, 16 occupied</small>
+          </article>
+          <article class="stat-card">
+            <span>Active Tenants</span>
+            <strong>16</strong>
+            <small>Across all current properties</small>
+          </article>
+          <article class="stat-card">
+            <span>Pending Approvals</span>
+            <strong>7</strong>
+            <small>This month submissions waiting</small>
+          </article>
+          <article class="stat-card">
+            <span>Maintenance Requests</span>
+            <strong>4</strong>
+            <small>2 urgent, 2 normal</small>
+          </article>
+        </section>
+
+        <section class="panel-card profiles-panel" id="profiles">
+          <div class="section-head section-head-inner">
+            <div>
+              <h2>User Profile Views</h2>
+              <p>Owner, renter, and guest/applicant profiles are separated so each role has the right details and actions.</p>
+            </div>
+            <button type="button" class="button button-primary">Manage Profiles</button>
+          </div>
+
+          <div class="profile-grid">
+            <article class="profile-card owner-profile">
+              <div class="profile-avatar">O</div>
+              <div>
+                <span class="profile-role">Owner Profile</span>
+                <h3>Ahmed Property Group</h3>
+                <p>Owner/admin manages listings, tenants, approvals, reports, and maintenance requests.</p>
+              </div>
+              <ul>
+                <li>24 properties managed</li>
+                <li>7 approvals waiting</li>
+                <li>4 open maintenance tickets</li>
+              </ul>
+              <button type="button" class="button button-dark full-width">Open Owner Profile</button>
+            </article>
+
+            <article class="profile-card renter-profile">
+              <div class="profile-avatar">R</div>
+              <div>
+                <span class="profile-role">Renter Profile</span>
+                <h3>Ali Raza</h3>
+                <p>Tenant profile focuses on assigned property, rent proof, utility bills, history, and maintenance.</p>
+              </div>
+              <ul>
+                <li>Assigned to DHA Block 5</li>
+                <li>July 2026 record pending</li>
+                <li>Rent due PKR 85,000</li>
+              </ul>
+              <button type="button" class="button button-primary full-width">Open Renter Profile</button>
+            </article>
+
+            <article class="profile-card guest-profile">
+              <div class="profile-avatar">G</div>
+              <div>
+                <span class="profile-role">Guest / Applicant Profile</span>
+                <h3>Guest Visitor</h3>
+                <p>Guest/applicant profile keeps browsing, saved listings, inquiries, and contact requests separate.</p>
+              </div>
+              <ul>
+                <li>Can search available areas</li>
+                <li>Can contact owner</li>
+                <li>Can submit application</li>
+              </ul>
+              <button type="button" class="button button-outline full-width">Open Guest Profile</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="dashboard-grid" id="reports">
+          <article class="panel-card chart-panel">
+            <h2>Monthly Rent Collection</h2>
+            <p>This is where the web dashboard chart will go</p>
+            <div class="chart-placeholder">Line / Bar Chart Area</div>
+          </article>
+
+          <article class="panel-card quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-list">
+              <button type="button" class="button button-primary">+ Add Property</button>
+              <button type="button" class="button button-outline">Review Approvals</button>
+              <button type="button" class="button button-outline">Check Maintenance</button>
+              <button type="button" class="button button-outline">View Reports</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel-card table-card" id="approvals">
+          <div class="section-head">
+            <div>
+              <h2>Recent Monthly Submissions</h2>
+              <p>What admin will approve or reject</p>
+            </div>
+            <button type="button" class="button button-primary">View All</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tenant</th>
+                  <th>Property</th>
+                  <th>Month</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ali Raza</td>
+                  <td>House - DHA Block 5</td>
+                  <td>July 2026</td>
+                  <td>PKR 85,000</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td><button type="button" class="button button-table">Review</button></td>
+                </tr>
+                <tr>
+                  <td>Sara Khan</td>
+                  <td>Office - Gulshan Block 1</td>
+                  <td>July 2026</td>
+                  <td>PKR 120,000</td>
+                  <td><span class="status approved">Approved</span></td>
+                  <td><button type="button" class="button button-table">Review</button></td>
+                </tr>
+                <tr>
+                  <td>Usman Tariq</td>
+                  <td>Guest House - Clifton</td>
+                  <td>July 2026</td>
+                  <td>PKR 65,000</td>
+                  <td><span class="status rejected">Rejected</span></td>
+                  <td><button type="button" class="button button-table">Review</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="properties">
+          <div class="section-head section-head-loose">
+            <div>
+              <h2>Property Listing View</h2>
+              <p>This same web portal can have a public applicant-facing listings page</p>
+            </div>
+            <button type="button" class="button button-primary">Add New Property</button>
+          </div>
+
+          <div class="property-grid">
+            <article class="property-card" data-area="dha block 5 karachi">
+              <div class="property-image">Property Image</div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <div>
+                    <h3>Modern Family House</h3>
+                    <p>DHA Block 5, Karachi</p>
+                  </div>
+                  <span class="status available">Available</span>
+                </div>
+                <strong>PKR 85,000 / month</strong>
+                <div class="button-row">
+                  <button type="button" class="button button-dark">View</button>
+                  <button type="button" class="button button-outline">Edit</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card" data-area="gulshan block 1 karachi">
+              <div class="property-image">Property Image</div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <div>
+                    <h3>Corporate Office Space</h3>
+                    <p>Gulshan Block 1, Karachi</p>
+                  </div>
+                  <span class="status occupied">Occupied</span>
+                </div>
+                <strong>PKR 120,000 / month</strong>
+                <div class="button-row">
+                  <button type="button" class="button button-dark">View</button>
+                  <button type="button" class="button button-outline">Edit</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card" data-area="clifton karachi">
+              <div class="property-image">Property Image</div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <div>
+                    <h3>Guest House Unit</h3>
+                    <p>Clifton, Karachi</p>
+                  </div>
+                  <span class="status available">Available</span>
+                </div>
+                <strong>PKR 65,000 / month</strong>
+                <div class="button-row">
+                  <button type="button" class="button button-dark">View</button>
+                  <button type="button" class="button button-outline">Edit</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="preview-grid" id="tenants">
+          <article class="panel-card">
+            <h2>Renter Dashboard Preview</h2>
+            <p>Simple web panel for monthly submission and maintenance</p>
+            <div class="mini-stat-grid">
+              <article class="stat-card compact">
+                <span>Current Month</span>
+                <strong>Pending</strong>
+                <small>Waiting for admin approval</small>
+              </article>
+              <article class="stat-card compact">
+                <span>Rent Due</span>
+                <strong>PKR 85,000</strong>
+                <small>July 2026</small>
+              </article>
+            </div>
+            <div class="action-list spacious">
+              <button type="button" class="button button-dark full-width">Submit Monthly Record</button>
+              <button type="button" class="button button-outline full-width">Upload Bill Proofs</button>
+              <button type="button" class="button button-outline full-width">Raise Maintenance Request</button>
+            </div>
+          </article>
+
+          <article class="panel-card" id="maintenance">
+            <h2>Approval Detail Preview</h2>
+            <p>Admin reviews proofs and freezes approved month</p>
+            <div class="proof-grid">
+              <article class="proof-card">
+                <span>Rent Proof</span>
+                <div>Uploaded Image</div>
+              </article>
+              <article class="proof-card">
+                <span>Electricity Bill</span>
+                <div>Uploaded Image</div>
+              </article>
+            </div>
+            <div class="button-row approval-actions">
+              <button type="button" class="button button-success">Approve</button>
+              <button type="button" class="button button-danger">Reject</button>
+              <button type="button" class="button button-outline">Back</button>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

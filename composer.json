@@ -1,0 +1,16 @@
+{
+  "name": "rental/portal-web",
+  "description": "Laravel-ready rental portal web MVP scaffold.",
+  "type": "project",
+  "require": {
+    "php": "^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "scripts": {
+    "serve-static": "php -S 127.0.0.1:8000 -t public"
+  }
+}
