@@ -25,7 +25,6 @@
           <a href="#approvals">Monthly Approvals</a>
           <a href="#maintenance">Maintenance</a>
           <a href="#applications">Applications</a>
-          <a href="#profiles">Profiles</a>
           <a href="#reports">Reports</a>
           <a href="#settings">Settings</a>
         </nav>
@@ -43,8 +42,6 @@
           <input id="globalSearch" type="search" placeholder="Search property, tenant, area...">
           <button type="button" class="button button-outline">Notifications</button>
           <button type="button" class="button button-dark">Owner Profile</button>
-          <button type="button" class="button button-outline">Renter Profile</button>
-          <button type="button" class="button button-outline">Guest Profile</button>
         </div>
       </header>
 
@@ -70,63 +67,6 @@
             <strong>4</strong>
             <small>2 urgent, 2 normal</small>
           </article>
-        </section>
-
-        <section class="panel-card profiles-panel" id="profiles">
-          <div class="section-head section-head-inner">
-            <div>
-              <h2>User Profile Views</h2>
-              <p>Owner, renter, and guest/applicant profiles are separated so each role has the right details and actions.</p>
-            </div>
-            <button type="button" class="button button-primary">Manage Profiles</button>
-          </div>
-
-          <div class="profile-grid">
-            <article class="profile-card owner-profile">
-              <div class="profile-avatar">O</div>
-              <div>
-                <span class="profile-role">Owner Profile</span>
-                <h3>Ahmed Property Group</h3>
-                <p>Owner/admin manages listings, tenants, approvals, reports, and maintenance requests.</p>
-              </div>
-              <ul>
-                <li>24 properties managed</li>
-                <li>7 approvals waiting</li>
-                <li>4 open maintenance tickets</li>
-              </ul>
-              <button type="button" class="button button-dark full-width">Open Owner Profile</button>
-            </article>
-
-            <article class="profile-card renter-profile">
-              <div class="profile-avatar">R</div>
-              <div>
-                <span class="profile-role">Renter Profile</span>
-                <h3>Ali Raza</h3>
-                <p>Tenant profile focuses on assigned property, rent proof, utility bills, history, and maintenance.</p>
-              </div>
-              <ul>
-                <li>Assigned to DHA Block 5</li>
-                <li>July 2026 record pending</li>
-                <li>Rent due PKR 85,000</li>
-              </ul>
-              <button type="button" class="button button-primary full-width">Open Renter Profile</button>
-            </article>
-
-            <article class="profile-card guest-profile">
-              <div class="profile-avatar">G</div>
-              <div>
-                <span class="profile-role">Guest / Applicant Profile</span>
-                <h3>Guest Visitor</h3>
-                <p>Guest/applicant profile keeps browsing, saved listings, inquiries, and contact requests separate.</p>
-              </div>
-              <ul>
-                <li>Can search available areas</li>
-                <li>Can contact owner</li>
-                <li>Can submit application</li>
-              </ul>
-              <button type="button" class="button button-outline full-width">Open Guest Profile</button>
-            </article>
-          </div>
         </section>
 
         <section class="dashboard-grid" id="reports">

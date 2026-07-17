@@ -27,14 +27,3 @@ The expected Laravel folders are present:
 - `tests/` for feature and unit tests
 
 `vendor/` is intentionally not committed. It should be generated with Composer in a real Laravel install.
-
-
-## Profile coverage
-
-The web wireframe now includes separate profile areas for:
-
-- Owner/admin users
-- Renter/tenant users
-- Guest/applicant users
-
-These are represented in the topbar actions and the `User Profile Views` section of the dashboard.
